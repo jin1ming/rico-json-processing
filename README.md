@@ -1,5 +1,10 @@
 # JSON Processing of RICO Dataset
 
+## **This is an amendment to the original version.**
+
+---
+
+
 These scripts are used to process JSON layouts of [RICO dataset](http://interactionmining.org/rico).<br />
 The result of processed layouts has been used in [a paper in CHI '20](https://dl.acm.org/doi/abs/10.1145/3313831.3376327).
 

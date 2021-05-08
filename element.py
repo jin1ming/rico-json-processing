@@ -13,10 +13,14 @@ class element(object):
 
         # Exception postprocess
         # - if children is invisible, delete it
+        wait_del = list()
         if self.children is not None:
             for child in self.children:
                 if not child.visible:
-                    self.children.remove(child)
+                    wait_del.append(child)
+
+        for it in wait_del:
+            self.children.remove(it)
 
         # Exception postprocess
         # - if DrawerLayout has 2+ layout/views (which means, drawer has opened),
