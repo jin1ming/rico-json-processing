@@ -1,5 +1,8 @@
 class element(object):
     def __init__(self, hier):
+        if hier.__class__ != dict:
+            self.visible = False
+            return
         self.visible = hier['visible-to-user']
         self.clickable = hier['clickable']
         self.bounds = hier['bounds']
@@ -9,7 +12,7 @@ class element(object):
                            'vertical': hier['scrollable-vertical']}
         self.resource_id = hier['resource-id'].split('/')[-1] if 'resource-id' in hier else None
         self.text = hier['text'] if 'text' in hier else None
-        self.children = [element(i) for i in hier['children']] if 'children' in hier else None
+        self.children = [element(i) for i in hier['children']] if 'children' in hier else list()
 
         # Exception postprocess
         # - if children is invisible, delete it
