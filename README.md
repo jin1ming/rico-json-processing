@@ -1,6 +1,9 @@
 # JSON Processing of RICO Dataset
 
 ## **This is an amendment to the original version.**
+## **这是一个对原来代码的修正版本**
+
+如果有疑问，欢迎提issue交流
 
 ---
 
